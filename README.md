@@ -1,3 +1,7 @@
+<p align="center">
+<a href="https://travis-ci.org/dung13890/vue-admin"><img src="https://travis-ci.org/dung13890/vue-admin.svg" alt="Build Status"></a>
+</p>
+
 # Template admin by Vuejs
 
 ## Required
