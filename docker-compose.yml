@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  application:
+    image: debian
+    volumes:
+      - ./:/var/www/app
+  node:
+    image: "node:8"
+    environment:
+      - NODE_ENV=testing
+    restart: always
+    volumes_from:
+      - application
+    tty: true
+    ports:
+      - "8080:8080"
