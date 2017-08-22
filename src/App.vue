@@ -1,23 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <heading></heading>
+    <sidebar></sidebar>
+    <main id="main">
+      <div class="container-fluid">
+        <router-view></router-view>
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
+import Heading from './components/Heading'
+import Sidebar from './components/Sidebar'
 export default {
-  name: 'app'
+  data () {
+    return {
+
+    }
+  },
+  components: {
+    Heading,
+    Sidebar
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  // Import Main styles for this application
+  @import "./assets/sass/main";
 </style>

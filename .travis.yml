@@ -12,5 +12,5 @@ before_script:
 install:
   - npm install
 script:
-    - npm run unit
+    # - npm run unit
     - npm run lint
