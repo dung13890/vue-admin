@@ -1,17 +1,20 @@
 <template>
-  <header class="app-header navbar">
+  <header class="navbar navbar-default app-heading">
+    <div class="brand">
+      <b-link class="navbar-brand img-responsive" to="#"></b-link>
+    </div>
     <div class="container-fluid">
-      <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button" @click="sidebarToggle">&#9776;</button>
-      <b-link class="navbar-brand" to="#"></b-link>
-      <b-nav-item-dropdown right>
-        <template slot="button-content">
-          <img src="./../assets/img/logo.png" class="img-avatar" alt="admin@bootstrapmaster.com">
-          <span class="d-md-down-none">admin</span>
-        </template>
-        <b-dropdown-item><i class="fa fa-user"></i> Profile</b-dropdown-item>
-        <b-dropdown-item><i class="fa fa-wrench"></i> Settings</b-dropdown-item>
-        <b-dropdown-item><i class="fa fa-lock"></i> Logout</b-dropdown-item>
-      </b-nav-item-dropdown>
+      <button class="navbar-toggler mobile-toggler" type="button" @click="sidebarToggle">&#9776;</button>
+      <b-nav>
+        <b-nav-item>
+          <i class="ion-android-notifications-none"></i><span class="badge badge-pill badge-danger">5</span>
+        </b-nav-item>
+        <b-nav-item-dropdown text="Admin" right>
+          <b-dropdown-item><i class="ion-person"></i> Profile</b-dropdown-item>
+          <b-dropdown-item><i class="ion-ios-cog-outline"></i> Settings</b-dropdown-item>
+          <b-dropdown-item><i class="ion-power"></i> Logout</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-nav>
     </div>
   </header>
 </template>

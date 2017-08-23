@@ -19,7 +19,8 @@ $ docker-compose exec node bash
 
 ``` bash
 # install dependencies
-npm install
+$ npm install
+$ bower install --allow-root
 
 # serve with hot reload at localhost:8080
 npm run dev

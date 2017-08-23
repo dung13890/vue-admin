@@ -8,9 +8,10 @@ env:
   - NODE_ENV=testing
 before_script:
   - export NODE_ENV=testing
-  - npm install
 install:
+  - npm install -g bower
   - npm install
+  - bower install --allow-root
 script:
     # - npm run unit
     - npm run lint

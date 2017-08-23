@@ -1,0 +1,19 @@
+{
+  "name": "Vue-admin",
+  "description": "A Vue.js admin project",
+  "main": "",
+  "authors": [
+    "Mr. Dung"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dung13890/vue-admin",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/bower",
+    "test",
+    "tests"
+  ]
+}

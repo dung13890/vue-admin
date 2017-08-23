@@ -1,5 +1,5 @@
 <template>
-  <b-jumbotron header="BootstrapVue" lead="Bootstrap 4 Components for Vue.js 2" >
+  <b-jumbotron header="Vue" lead="Bootstrap 4 Components for Vue.js 2" >
     <p>{{ msg }}</p>
     <b-btn variant="primary" href="#">Docs</b-btn>
   </b-jumbotron>

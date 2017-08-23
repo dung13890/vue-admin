@@ -1,5 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap";
 @import "~bootstrap-vue/dist/bootstrap-vue";
 
+@import "variables";
+@import "../bower/Ionicons/scss/ionicons";
+
 @import "./partials/heading";
 @import "./partials/sidebar";
