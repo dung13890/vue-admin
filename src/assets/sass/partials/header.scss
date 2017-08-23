@@ -1,0 +1,30 @@
+.app-header {
+  min-height: 4rem;
+  background-color: #563d7c;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+.navbar-dark {
+  .navbar-brand {
+    color: #fff;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: rgba(255,255,255,.5);
+      &:focus,
+      &:hover {
+        color: rgba(255,255,255,.75);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .app-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+  }
+}

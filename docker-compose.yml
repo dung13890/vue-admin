@@ -6,9 +6,15 @@ services:
     volumes:
       - ./:/var/www/app
   node:
+<<<<<<< HEAD
+    image: dung13890/vue-env
+    environment:
+      - NODE_ENV=development
+=======
     image: "node:8"
     environment:
       - NODE_ENV=testing
+>>>>>>> f7e81b4
     restart: always
     volumes_from:
       - application

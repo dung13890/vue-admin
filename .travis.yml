@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "7"
+cache:
+  directories:
+    - "node_modules"
+env:
+  - NODE_ENV=testing
+before_script:
+  - export NODE_ENV=testing
+install:
+  - npm install -g bower
+  - npm install
+  - bower install --allow-root
+script:
+    # - npm run unit
+    - npm run lint

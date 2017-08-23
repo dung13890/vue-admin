@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<p align="center">
+<a href="https://travis-ci.org/dung13890/vue-admin"><img src="https://travis-ci.org/dung13890/vue-admin.svg" alt="Build Status"></a>
+</p>
+
+=======
+>>>>>>> f7e81b4
 # Template admin by Vuejs
 
 ## Required
@@ -15,7 +22,12 @@ $ docker-compose exec node bash
 
 ``` bash
 # install dependencies
+<<<<<<< HEAD
+$ npm install
+$ bower install --allow-root
+=======
 npm install
+>>>>>>> f7e81b4
 
 # serve with hot reload at localhost:8080
 npm run dev
