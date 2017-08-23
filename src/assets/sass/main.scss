@@ -2,7 +2,9 @@
 @import "~bootstrap-vue/dist/bootstrap-vue";
 
 @import "variables";
+@import "pavilion";
 @import "../bower/Ionicons/scss/ionicons";
 
-@import "./partials/heading";
+@import "./partials/layout";
+@import "./partials/header";
 @import "./partials/sidebar";

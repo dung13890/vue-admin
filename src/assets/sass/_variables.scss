@@ -1,3 +1,38 @@
-$color1: #ffffff;
+$white: #ffffff !default;
+$gray-800: #2d333e !default;
+
+$border-color: #c2cfd6 !default;
 
 $ionicons-font-path: "./assets/bower/Ionicons/fonts";
+
+$layout-transition-speed: .25s !default;
+
+// Navbar
+$navbar-height: 55px !default;
+$navbar-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1) !default;
+$navbar-bg: #fff !default;
+$navbar-border: (
+  bottom: (
+    size: 1px,
+    style: solid,
+    color: $border-color
+  )
+)  !default;
+$navbar-brand-width: 155px !default;
+$navbar-brand-bg: #fff !default;
+$navbar-brand-logo: url('./assets/img/logo.png') !default;
+$navbar-brand-logo-size: 70px auto !default;
+$navbar-padding-y: 0.5rem;
+$navbar-padding-x: 1rem;
+
+// Sidebar
+$sidebar-width: 260px !default;
+$sidebar-padding: 0 !default;
+$sidebar-color: #fff !default;
+$sidebar-bg: $gray-800;
+$sidebar-borders: none !default;
+
+
+
+// Footer
+$footer-height: 50px !default;

@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <heading></heading>
-    <sidebar></sidebar>
-    <main id="main">
-      <div class="container-fluid">
-        <router-view></router-view>
-      </div>
-    </main>
+    <app-header></app-header>
+    <div class="app-body">
+      <app-sidebar></app-sidebar>
+      <main id="main">
+        <div class="container-fluid">
+          <router-view></router-view>
+        </div>
+      </main>
+    </div>
   </div>
 </template>
 
 <script>
-import Heading from './components/Heading'
-import Sidebar from './components/Sidebar'
+import AppHeader from './components/Header'
+import AppSidebar from './components/Sidebar'
 export default {
   data () {
     return {
@@ -20,8 +22,8 @@ export default {
     }
   },
   components: {
-    Heading,
-    Sidebar
+    AppHeader,
+    AppSidebar
   }
 }
 </script>

@@ -1,0 +1,19 @@
+.sidebar {
+  position: fixed;
+  width: $sidebar-width;
+  height: 100%;
+  padding: $sidebar-padding;
+  overflow: hidden;
+  color: $sidebar-color;
+  background: $sidebar-bg;
+  @include borders($sidebar-borders);
+
+  .sidebar-nav {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    height: calc(100vh - #{$navbar-height});
+    @include sidebar-width($sidebar-borders, $sidebar-width);
+  }
+}
