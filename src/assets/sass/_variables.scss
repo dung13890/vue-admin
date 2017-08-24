@@ -1,14 +1,25 @@
-$white: #ffffff !default;
-$gray-800: #2d333e !default;
+$white: #fff !default;
+$black: #000 !default;
+$gray-sidebar: #2b333e !default;
+$gray-brand: #252c35 !default;
+$blue-hover: #5193db !default;
 
+// Other
+$zindex-sticky: 1020 !default;
 $border-color: #c2cfd6 !default;
-
 $ionicons-font-path: "./assets/bower/Ionicons/fonts";
-
 $layout-transition-speed: .25s !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
 // Navbar
-$navbar-height: 55px !default;
+$navbar-height: 75px !default;
+$navbar-color: $white;
 $navbar-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1) !default;
 $navbar-bg: #fff !default;
 $navbar-border: (
@@ -19,8 +30,7 @@ $navbar-border: (
   )
 )  !default;
 $navbar-brand-width: 155px !default;
-$navbar-brand-bg: #fff !default;
-$navbar-brand-logo: url('./assets/img/logo.png') !default;
+$navbar-brand-logo: url('./assets/img/logo_white.png') !default;
 $navbar-brand-logo-size: 70px auto !default;
 $navbar-padding-y: 0.5rem;
 $navbar-padding-x: 1rem;
@@ -29,8 +39,29 @@ $navbar-padding-x: 1rem;
 $sidebar-width: 260px !default;
 $sidebar-padding: 0 !default;
 $sidebar-color: #fff !default;
-$sidebar-bg: $gray-800;
+$sidebar-bg: $gray-sidebar;
 $sidebar-borders: none !default;
+
+$sidebar-nav-link-padding-y: 1.3rem !default;
+$sidebar-nav-link-padding-x: 1rem !default;
+$sidebar-nav-link-bg: transparent !default;
+$sidebar-nav-link-color: #fff !default;
+$sidebar-nav-link-borders: (
+  bottom: (
+    size: 1px,
+    style: solid,
+    color: $gray-brand
+  )
+) !default;
+$sidebar-nav-link-icon-color: $text-muted !default;
+$sidebar-nav-link-hover-color: #fff !default;
+$sidebar-nav-link-hover-bg: $blue-hover !default;
+$sidebar-nav-link-hover-icon-color:  #fff !default;
+$sidebar-nav-link-hover-borders: 0 !default;
+$sidebar-nav-link-active-color: #fff !default;
+$sidebar-nav-link-active-bg: lighten($sidebar-bg, 5%) !default;
+$sidebar-nav-link-active-icon-color:  $blue-hover !default;
+$sidebar-nav-link-active-borders: 0 !default;
 
 
 

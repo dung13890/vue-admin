@@ -3,7 +3,7 @@
     <app-header></app-header>
     <div class="app-body">
       <app-sidebar></app-sidebar>
-      <main id="main">
+      <main id="main" class="main">
         <div class="container-fluid">
           <router-view></router-view>
         </div>

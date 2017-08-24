@@ -6,6 +6,7 @@
 
 .app-header {
   flex: 0 0 $navbar-height;
+  z-index: $zindex-sticky;
   position: fixed;
   width: 100%;
 }
@@ -24,6 +25,7 @@
   .main {
     flex: 1;
     min-width: 0;
+    margin-left: $sidebar-width;
   }
 
   .sidebar {
@@ -41,6 +43,52 @@
   }
   .main, .app-footer {
     margin-left: 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .app-header.navbar {
+    text-align: center;
+    .brand {
+      width:auto !important;
+      background-color: $white !important;
+      .navbar-toggler {
+        color: $black !important;
+      }
+    }
+  }
+
+  .app-body {
+    margin-top: $navbar-height;
+  }
+
+  .sidebar {
+    margin-left: - $sidebar-width;
+  }
+
+  .main, .app-footer {
+    margin-left: 0 !important;
+  }
+
+  .sidebar-mobile-show {
+
+    .sidebar {
+      width: $sidebar-width;
+      margin-left: 0;
+
+      .sidebar-nav {
+        height: calc(100vh - #{$navbar-height});
+      }
+    }
+
+    .main, .app-footer {
+      margin-right: - $sidebar-width !important;
+      margin-left: $sidebar-width !important;
+    }
+  }
+
+  .hidden-md-down {
+    display: none !important
   }
 }
 
