@@ -8,6 +8,7 @@
           <router-view></router-view>
         </div>
       </main>
+      <app-footer></app-footer>
     </div>
   </div>
 </template>
@@ -15,6 +16,7 @@
 <script>
 import AppHeader from './components/Header'
 import AppSidebar from './components/Sidebar'
+import AppFooter from './components/Footer'
 export default {
   data () {
     return {
@@ -23,7 +25,8 @@ export default {
   },
   components: {
     AppHeader,
-    AppSidebar
+    AppSidebar,
+    AppFooter
   }
 }
 </script>

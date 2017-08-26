@@ -13,6 +13,18 @@
 
 .app-footer {
   flex: 0 0 $footer-height;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  .copyright {
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 11px;
+    text-align: center;
+    position: relative !important;
+  }
 }
 
 .app-body {
@@ -26,6 +38,8 @@
     flex: 1;
     min-width: 0;
     margin-left: $sidebar-width;
+    padding: 1rem 0 2rem;
+    background-color: $gray-background;
   }
 
   .sidebar {
