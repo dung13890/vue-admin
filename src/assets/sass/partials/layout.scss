@@ -28,6 +28,7 @@
 }
 
 .app-body {
+  position: relative;
   margin-top: $navbar-height;
   display: flex;
   flex-direction: row;
