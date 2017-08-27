@@ -14,8 +14,19 @@
           </b-form-fieldset>
         </div>
       </div>
-      <div class="row my-1">
+      <div class="row">
+        <div class="col-md-12">
+          <b-table class="table table-striped table-bordered"
+            :fields="fields"
+          >
 
+          </b-table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+          <b-pagination :total-rows="60" :per-page="perPage" />
+        </div>
       </div>
     </div>
   </div>
@@ -29,7 +40,13 @@ export default {
         {text: 1, value: 1}, {text: 2, value: 2}, {text: 3, value: 3}, {text: 4, value: 4}
       ],
       perPage: 5,
-      filter: null
+      filter: null,
+      fields: {
+        name: {label: 'Name', sortable: true},
+        age: {label: 'Age', sortable: true, 'class': 'text-center'},
+        isActive: {label: 'is Active'},
+        actions: {label: 'Actions'}
+      }
     }
   }
 }
