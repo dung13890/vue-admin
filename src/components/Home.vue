@@ -5,7 +5,7 @@
       <div class="my-1 row">
         <div class="col-md-6">
           <b-form-fieldset horizontal label="Rows per page" :label-cols="6">
-            <b-form-select :options="pageOptions" v-model="perPage" />
+            <b-form-select :options="pageOptions" />
           </b-form-fieldset>
         </div>
         <div class="col-md-6">
@@ -16,16 +16,14 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <b-table class="table table-striped table-bordered"
-            :fields="fields"
+          <code>query: {{ query }}</code>
+          <datatable class="table table-striped table-bordered"
+            :columns="columns"
+            :query="query"
+            :data="data"
+            :total="total"
           >
-
-          </b-table>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-4">
-          <b-pagination :total-rows="60" :per-page="perPage" />
+          </datatable>
         </div>
       </div>
     </div>
@@ -39,14 +37,19 @@ export default {
       pageOptions: [
         {text: 1, value: 1}, {text: 2, value: 2}, {text: 3, value: 3}, {text: 4, value: 4}
       ],
-      perPage: 5,
       filter: null,
-      fields: {
-        name: {label: 'Name', sortable: true},
-        age: {label: 'Age', sortable: true, 'class': 'text-center'},
-        isActive: {label: 'is Active'},
-        actions: {label: 'Actions'}
-      }
+      columns: [
+        {title: 'User ID', field: 'uid', sort: true},
+        {title: 'Username', field: 'name', sort: true},
+        {title: 'Age', field: 'age', sort: true},
+        {title: 'Email', field: 'email', sort: true},
+        {title: 'Country', field: 'country', sort: true}
+      ],
+      data: [
+        {uid: 1, name: 'dao anh dung', age: 27, email: 'dung13890@gmail.com', country: 'viet Nam'}
+      ],
+      total: 1,
+      query: {}
     }
   }
 }
