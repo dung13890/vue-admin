@@ -16,11 +16,12 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <b-table class="table table-striped table-bordered"
-            :fields="fields"
-          >
-
-          </b-table>
+          <div class="table-responsive">
+            <b-table class="table table-striped table-bordered"
+              :fields="fields"
+            >
+            </b-table>
+          </div>
         </div>
       </div>
       <div class="row">
