@@ -2,21 +2,26 @@
   <div class="card">
     <div class="card-header">card heading without title</div>
     <div class="card-body">
-      <div class="my-1 row">
-        <div class="col-md-6">
-          <b-form-fieldset horizontal label="Filter" :label-cols="3">
-            <b-form-input v-model="filter" placeholder="Type to Search" />
-          </b-form-fieldset>
+      <div class="my-2 row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="ion-ios-search"></i>
+              </span>
+              <b-form-input v-model="filter"placeholder="Type to Search" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <b-button variant="primary">Search</b-button>
+            <b-button variant="danger">reset</b-button>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <code>{{ test }}</code>
-          <div class="row mb-2">
-            <div class="col-md-6">
-              <b-form-select class="per-page" :options="pageOptions" v-model="perPage" />
-            </div>
-          </div>
           <div class="table-responsive">
             <b-table class="table table-striped table-bordered"
               :items="myTest"
@@ -29,7 +34,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-7">
+          <b-form-select class="per-page" :options="pageOptions" v-model="perPage" />
+        </div>
+        <div class="col-md-5">
           <b-pagination hide-goto-end-buttons hide-ellipsis v-model="currentPage"
             :total-rows="totalRows"
             :per-page="perPage"
@@ -41,12 +49,10 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Datatable from './../services/datatable'
 export default {
   data () {
-    axios.defaults.headers.common['Accept'] = 'application/json'
-    let datatable = Datatable.setHttp(axios)
+    let datatable = Datatable.setHttp(window.axios)
     return {
       dataService: datatable,
       pageOptions: [
@@ -82,6 +88,7 @@ export default {
       }
       return this.dataService.getData(params).then(
         (items) => {
+          console.log('test')
           return items.data
         },
         (error) => {

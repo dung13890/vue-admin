@@ -10,7 +10,7 @@ export default {
   getData (params) {
     var self = this
     return new Promise((resolve, reject) => {
-      self.http.get('https://api.coinmarketcap.com/v1/ticker/', params).then((item) => {
+      self.http.get('/ticker/', params).then((item) => {
         resolve(item)
       }, (error) => {
         reject(error)

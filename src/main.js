@@ -6,7 +6,12 @@ import axios from 'axios'
 import App from './App'
 import router from './router'
 
-Vue.use(BootstrapVue, axios)
+window.axios = axios.create({
+  baseURL: 'https://api.coinmarketcap.com/v1/',
+  timeout: 5000
+})
+
+Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
