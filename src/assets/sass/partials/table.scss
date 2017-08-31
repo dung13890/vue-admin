@@ -1,0 +1,14 @@
+.per-page {
+  width: 75px;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 0;
+}
+
+.table-striped {
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: #f9f9f9
+    }
+  }
+}
