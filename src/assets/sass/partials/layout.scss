@@ -1,9 +1,22 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   :focus {
     outline: 0;
+    box-shadow: none;
+
+    @include box-shadow(none);
+  }
+  * {
+    border-radius: 0 !important;
+  }
+  button, .btn, input[type="button"] {
+    cursor: pointer;
   }
 }
 

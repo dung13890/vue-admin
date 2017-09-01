@@ -1,18 +1,31 @@
+@import "../variables";
+@import "../pavilion";
+
 .per-page {
   width: 75px;
   display: inline-block;
   font-size: 12px;
   border-radius: 0;
+  margin-bottom: 1rem;
 }
 
-.table-striped {
-  tbody {
-    tr:nth-of-type(odd) {
-      background-color: #f9f9f9
+table {
+  font-size: 0.9rem;
+  &.table-striped {
+    tbody {
+      tr:nth-of-type(odd) {
+        background-color: $gray-table
+      }
     }
   }
 }
 
 ul.pagination {
   float:right;
+}
+
+@include media-breakpoint-down(md) {
+  .per-page {
+    width: 100% !important;
+  }
 }
