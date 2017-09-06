@@ -66,13 +66,10 @@ export default {
       sortBy: null,
       sortDesc: false,
       fields: {
-        rank: {label: 'Rank'},
+        id: {label: 'id'},
         name: {label: 'Name', sortable: true, 'class': 'text-center'},
-        symbol: {label: 'Symbol', sortable: true},
-        price_usd: {label: 'Price(USD)', sortable: true},
-        percent_change_1h: {label: '1H', sortable: true},
-        percent_change_24h: {label: '1D', sortable: true},
-        percent_change_7d: {label: '1W', sortable: true}
+        email: {label: 'Email', sortable: true},
+        date: {label: 'Date', sortable: true}
       }
     }
   },
@@ -88,8 +85,7 @@ export default {
       }
       return this.dataService.getData(params).then(
         (items) => {
-          console.log('test')
-          return items.data
+          return items.data.data
         },
         (error) => {
           console.log('errors:' + error)

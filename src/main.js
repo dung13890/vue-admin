@@ -7,7 +7,7 @@ import App from './App'
 import router from './router'
 
 window.axios = axios.create({
-  baseURL: 'https://api.coinmarketcap.com/v1/',
+  baseURL: 'http://localhost:3000/',
   timeout: 5000
 })
 
