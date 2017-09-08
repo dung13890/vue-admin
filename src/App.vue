@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import AppHeader from './components/Header'
-import AppSidebar from './components/Sidebar'
-import AppFooter from './components/Footer'
+import AppHeader from './components/partials/Header'
+import AppSidebar from './components/partials/Sidebar'
+import AppFooter from './components/partials/Footer'
 export default {
   data () {
     return {

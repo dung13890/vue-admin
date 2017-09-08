@@ -9,7 +9,7 @@
               <span class="input-group-addon">
                 <i class="ion-ios-search"></i>
               </span>
-              <b-form-input v-model="filter"placeholder="Type to Search" />
+              <b-form-input v-model="filter" placeholder="Type to Search" />
             </div>
           </div>
         </div>
@@ -54,6 +54,10 @@ export default {
   data () {
     let datatable = Datatable.setHttp(window.axios)
     return {
+      user: {
+        name: null,
+        email: null
+      },
       dataService: datatable,
       pageOptions: [
         {text: 10, value: 10}, {text: 25, value: 25}, {text: 50, value: 50}, {text: 100, value: 100}
