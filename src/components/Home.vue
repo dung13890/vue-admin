@@ -1,4 +1,7 @@
 <template>
+<div>
+  <create :item.sync="item" :factory="dataService"></create>
+  <br>
   <div class="card">
     <div class="card-header">card heading without title</div>
     <div class="card-body">
@@ -23,7 +26,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="table-responsive">
-            <b-table class="table table-striped table-bordered"
+            <b-table ref="table" class="table table-striped table-bordered"
               :items="myTest"
               :fields="fields"
               :current-page="currentPage"
@@ -46,15 +49,17 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
 import Datatable from './../services/datatable'
+import Create from './create'
 export default {
   data () {
     let datatable = Datatable.setHttp(window.axios)
     return {
-      user: {
+      item: {
         name: null,
         email: null
       },
@@ -97,7 +102,8 @@ export default {
         }
       )
     }
-  }
+  },
+  components: { Create }
 }
 </script>
 <style lang="scss">

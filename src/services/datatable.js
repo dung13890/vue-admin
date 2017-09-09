@@ -16,5 +16,15 @@ export default {
         reject(error)
       })
     })
+  },
+  postData (params) {
+    var self = this
+    return new Promise((resolve, reject) => {
+      self.http.post('/users', params).then((item) => {
+        resolve(item)
+      }, (error) => {
+        reject(error)
+      })
+    })
   }
 }
