@@ -2,7 +2,7 @@
 <div>
   <create :item.sync="item" :factory="dataService"></create>
   <br>
-  <div class="card">
+  <div class="card my-2">
     <div class="card-header">card heading without title</div>
     <div class="card-body">
       <div class="my-2 row">
