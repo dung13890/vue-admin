@@ -23,7 +23,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <table-data :fields.sync="fields" :factory="dataService" :filter.sync="filter" ></table-data>
+<!--       <div class="row">
         <div class="col-md-12">
           <div class="table-responsive">
             <b-table ref="table" class="table table-striped table-bordered"
@@ -46,7 +47,7 @@
             :per-page="perPage"
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -55,6 +56,7 @@
 <script>
 import Datatable from './../services/datatable'
 import Create from './create'
+import TableData from './partials/table'
 export default {
   data () {
     let datatable = Datatable.setHttp(window.axios)
@@ -64,16 +66,16 @@ export default {
         email: null
       },
       dataService: datatable,
-      pageOptions: [
-        {text: 10, value: 10}, {text: 25, value: 25}, {text: 50, value: 50}, {text: 100, value: 100}
-      ],
-      currentPage: 1,
-      perPage: 10,
-      test: null,
+      // pageOptions: [
+      //   {text: 10, value: 10}, {text: 25, value: 25}, {text: 50, value: 50}, {text: 100, value: 100}
+      // ],
+      // currentPage: 1,
+      // perPage: 10,
+      // test: null,
       filter: null,
-      totalRows: 40,
-      sortBy: null,
-      sortDesc: false,
+      // totalRows: 40,
+      // sortBy: null,
+      // sortDesc: false,
       fields: {
         id: {label: 'id'},
         name: {label: 'Name', sortable: true, 'class': 'text-center'},
@@ -82,28 +84,28 @@ export default {
       }
     }
   },
-  methods: {
-    myTest (ctx) {
-      let params = {
-        params: {
-          limit: ctx.perPage,
-          offset: ctx.perPage * (ctx.currentPage - 1),
-          sort: ctx.sortDesc ? 'desc' : 'asc',
-          order: ctx.sortBy
-        }
-      }
-      return this.dataService.getData(params).then(
-        (items) => {
-          return items.data.data
-        },
-        (error) => {
-          console.log('errors:' + error)
-          return []
-        }
-      )
-    }
-  },
-  components: { Create }
+  // methods: {
+  //   myTest (ctx) {
+  //     let params = {
+  //       params: {
+  //         limit: ctx.perPage,
+  //         offset: ctx.perPage * (ctx.currentPage - 1),
+  //         sort: ctx.sortDesc ? 'desc' : 'asc',
+  //         order: ctx.sortBy
+  //       }
+  //     }
+  //     return this.dataService.getData(params).then(
+  //       (items) => {
+  //         return items.data.data
+  //       },
+  //       (error) => {
+  //         console.log('errors:' + error)
+  //         return []
+  //       }
+  //     )
+  //   }
+  // },
+  components: { Create, TableData }
 }
 </script>
 <style lang="scss">
