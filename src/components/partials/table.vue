@@ -53,6 +53,9 @@ export default {
       type: Object
     }
   },
+  created: function () {
+    this.$parent.$on('refresh-table', this.refreshDatatable)
+  },
   methods: {
     datatable (ctx) {
       let params = {
@@ -72,6 +75,10 @@ export default {
           return []
         }
       )
+    },
+    refreshDatatable () {
+      console.log(3)
+      this.$refs.table.refresh()
     }
   }
 }

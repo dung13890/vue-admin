@@ -43,7 +43,7 @@
       store () {
         this.factory.postData(this.item).then(
           (item) => {
-            this.$parent.$refs.table.refresh()
+            this.$parent.$emit('refresh-table')
             this.showAlert()
           },
           (error) => {
